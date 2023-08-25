@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const multerSetup = require("./utils/multerSetup");
+const { uploadDir, uploadPath } = require("./utils/multerSetup");
 
 const staticDir = "static";
 const staticPath = path.join(__dirname, staticDir);
@@ -8,7 +8,7 @@ const staticPath = path.join(__dirname, staticDir);
 const app = express();
 
 app.use(express.static(staticPath));
-app.use(`/${multerSetup.uploadDir}`, express.static(multerSetup.uploadPath));
+app.use(`/${uploadDir}`, express.static(uploadPath));
 app.set("view engine", "pug");
 
 // ===== Routes ===== //
