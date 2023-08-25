@@ -8,8 +8,6 @@ const db = new sqlite3.Database("data/pictures.sqlite", (err) => {
   }
 });
 
-// let's define a function 'old-school'
-// return object with success and message
 function addPicture(name, path, callback) {
   if (!db) {
     callback({ success: false, message: "Database connection not available" });

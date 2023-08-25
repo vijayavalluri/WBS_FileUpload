@@ -28,4 +28,5 @@ app.use(catPicsUploadRouter);
 const getPicturesRouter = require("./routes/getPicturesRoute");
 app.use(getPicturesRouter);
 
+// ===== Start server ===== //
 app.listen(3000, () => console.log(`Server running on localhost:${3000}`));
